@@ -25,7 +25,7 @@ const url_ary = [
       :style="{ animationDelay: `${(n - 1) * 0.15}s` }"
     >
       <img
-        :src="`/project_${n}.png`"
+        :src="`project_${n}.png`"
         :alt="`project_${n}`"
         loading="lazy"
         decoding="async"
