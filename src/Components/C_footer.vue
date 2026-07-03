@@ -15,9 +15,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
     <a href="https://www.behance.net/deamaru" target="_blank" class="icon">
       <i class="fa-brands fa-behance"></i>
     </a>
-    <a href="https://heyzine.com/flip-book/5aa43bc172.html#page/1" target="_blank" class="icon">
+    <!-- <a href="https://heyzine.com/flip-book/5aa43bc172.html#page/1" target="_blank" class="icon">
       <i class="fa-regular fa-address-book"></i>
-    </a>
+    </a> -->
     <br>
     <span>copyright © all rights reserved</span>
   </div>
