@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-src/asset
+src/asset/*.png
 dist
 dist-ssr
 coverage
