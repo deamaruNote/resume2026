@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    const main_color = "#233A58";
+const main_color = "#233A58";
 </script>
 
 <template>
@@ -37,6 +37,13 @@
 </template>
 
 <style scoped>
+.box-icon {
+  padding: 10px;
+  width: var(--box-width);
+  height: var(--box-width);
+  background: var(--min-color);
+  box-sizing: border-box;
+}
 h1 {
   position: absolute;
   color: var(--min-color);
@@ -45,13 +52,25 @@ h1 {
   font-weight: 300;
   font-family: Dancing Script, cursive;
   mix-blend-mode: difference;
+  z-index: 300;
+  animation: h1_start 1.5s ease-in-out forwards;
 }
-.box-icon {
-  padding: 10px;
-  width: 150px;
-  height: 150px;
+.box-icon::before {
+  content: "";
+  position: fixed;
+
+  width: 300vmax;
+  height: 300vmax;
+  left: 50%;
+  top: 150px;
+
+  transform: translate(-50%, -50%) scale(1);
   background: var(--min-color);
+  z-index: 200;
+  animation: bg_start 1.5s ease-in-out forwards;
+  animation-delay: 0.3s;
 }
+
 .img {
   margin: 0 0 0 auto;
   width: 20px;
@@ -62,14 +81,44 @@ h1 {
   width: 100%;
   padding: 0;
 }
-@media (max-width: 480px){
-    h1{
-        font-size: 2.5rem;
-        transform: translate(-2.5rem, -1rem) rotate(-3deg);
-    }
-    .img{
-        margin: auto;
-        transform: scale(7) translate(0, 0.5rem);
-    }
+/* RWD */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+    transform: translate(-2.5rem, -1rem) rotate(-3deg);
+  }
+  .img {
+    margin: auto;
+    transform: scale(7) translate(0, 0.5rem);
+  }
+}
+
+/* ANIMATION */
+@keyframes h1_start {
+  0% {
+    scale: 3;
+    rotate: 363deg;
+  }
+
+  100% {
+    scale: 1;
+    rotate: -3deg;
+  }
+}
+@keyframes bg_start {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  85% {
+    transform: translate(-50%, -50%) scale(0.03);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
 }
 </style>

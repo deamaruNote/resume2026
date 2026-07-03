@@ -13,7 +13,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.0",
     "@fortawesome/vue-fontawesome": "^3.3.0",
-    "vue": "^3.5.38"
+    "vue": "^3.5.38",
+    "vue3-lazyload": "^0.4.2"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
